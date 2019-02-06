@@ -9,7 +9,7 @@ function BlogPost(props) {
     // setting props.data.markdownRemark to post; then using that to get frontmatter and pulling out title
     const post = props.data.markdownRemark;
     const url = props.data.site.siteMetadata.siteUrl
-    const { title, date } = post.frontmatter;
+    const { title, description, date } = post.frontmatter;
     const thumbnail = post.frontmatter.image.childImageSharp.resize.src;
 
     return (

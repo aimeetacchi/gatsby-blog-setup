@@ -1,5 +1,5 @@
 import React from 'react'
-import Hemel from 'react-helmet'
+import Helmet from 'react-helmet'
 
 
 function Metatags(props) {
@@ -17,6 +17,16 @@ function Metatags(props) {
                 {
                     property: 'og:url',
                     content: props.pathname ? props.url + props.pathname : props.url,
+                },
+
+                {
+                    property: 'og:image',
+                    content: props.thumbnail && props.thumbnail,
+                },
+
+                {
+                    property: 'og:image:secure_url',
+                    content: props.thumbnail && props.thumbnail,
                 },
 
                 {
@@ -49,6 +59,8 @@ function Metatags(props) {
                     content: props.thumbnail && props.thumbnail,
                 },
                 { property: 'og:type', content: 'website' },
+                { name: 'robots', content: 'index, follow' },
+
                 { name: 'twitter:creator', content: '@aimeetacchi' },
                 { property: 'og:site_name', content: 'mysitename' },
             ]}
